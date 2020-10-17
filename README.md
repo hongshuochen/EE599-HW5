@@ -8,20 +8,34 @@
 - Deadline: Monday, September 21st by 23:59 pm
 - Total: 130 points. 100 points is considered full credit.
 
-## Question 1 (10 Points. Easy)
+## Question 1 (50 Points. Medium)
 
-Write several functions with the same name ```myfunction``` in [cpplib.cc](src/lib/cpplib.cc). And using function overloading to satisfy the following requirements:
+Please implement the following class for MaxHeap:
+- Provide Gtest for methods that are marked with "GT".
+```c++
+class MaxHeap {
+ public:
+  MaxHeap(); // default constructor
 
-- All three functions take 2 parameters as the input.
-- If both inputs are integers perform multiplication and return the result.
-- If both inputs are string, concatenate both the strings and return the output.
-- If the first input is an integer and the second input is a string or vice-versa your code should return a string that will hold the concatenated value of both the inputs.
+  int getParentIndex(int i); //GT
+  int getLeftIndex(int i); //GT
+  int getRightIndex(int i); //GT
+  int getLargestChildIndex(int i); //GT
 
-Examples:
+  int getLeft(int i);
+  int getRight(int i);
+  int getParent(int i);
 
-- input: (3, 5), output: 15
-- input: (“abc”, “efg”), output: “abcefg”
-- input: (“EE”, 599), output: “EE599”
+  int top(); //GT
+  void push(int v); //GT
+  void pop(); //GT
+  void TrickleUp(int i);
+  void TrickleDown(int i);
+
+ private:
+  vector<int> data_;
+};
+```
 
 Write several tests using GTest for your function in [tests/q1_student_test.cc](tests/q1_student_test.cc).
 
@@ -30,63 +44,39 @@ Please create your test cases and run the following command to verify the functi
 bazel test tests:q1_student_test
 ```
 
-## Question 2 (10 Points. Easy)
+## Question 2 (15 Points. Easy)
 
-How would you find the size of a non-dynamic array? (We are asking about an array, not a vector). Provide the example and outputs of your run for:
+Write a function ```void heapSort(vector<int> &input)``` that uses heap-sort to sort a vector of integers.
+- You should use std::priority_queue to implement your funciton.
+- Provide time complexity for the function.
 
-- An array of integers
-- An array of chars
-- An array of floats
+Example :
+input: [5, 9, 3, 1, 7]
+After calling the method, input changes to [1, 3, 5, 7, 9]
 
-Answer:
+Write several tests using GTest for your function in [tests/q2_student_test.cc](tests/q2_student_test.cc).
 
-## Question 3 (10 Points. Easy)
+Please create your test cases and run the following command to verify the functionality of your program.
+```
+bazel test tests:q2_student_test
+```
 
-Write a function swap that will swap the values of the inputs (two integers).
-Implement this using
+## Question 3 (15 Points. Easy)
 
-- **pass by references**
+Write a function ```int findKthLargest(const vector<int> &input, int k)``` that finds the kth largest element in an unsorted vector and returns that value.
+- You should do this without sorting the vector
+- You can assume the input vector does not have duplicate values
+- Provide time complexity for the function.
 
-  ```void CPPLib::SwapByRefernce(int &input1, int &input2);```
-- **pass by pointers**
+Example:
+input: [0, 2, 1, 5, 6, 3] and k = 2
+output: 5
 
-  ```void CPPLib::SwapByPointer(int *input1, int *input2);```
-
-Example :\
-Before: x = 20, y = 30 \
-We call Swap(x,y) \
-After: x = 30, y = 20
-
-Write several tests using GTest for your function in [tests/q3_student_test.cc](tests/q3_student_test.cc).
+Write several tests using GTest for your function in [tests/q3student_test.cc](tests/q3_student_test.cc).
 
 Please create your test cases and run the following command to verify the functionality of your program.
 ```
 bazel test tests:q3_student_test
-```
-
-## Question 4 (20 Points. Easy)
-
-- Write a function that takes a vector of integers as input. The output is the same vector where all duplicates are removed. Note that the output is the same vector means the function's return type should be void and do the modifications on the input vector.
-  - Example: before: v=[1, 2, 2, 4], after : v=[1, 2, 4]
-  - Solve this for the following cases:
-    - You cannot use std::set
-  
-    ```void CPPLib::UniqeVectorNotBySet(std::vector<int> &input)```
-    - You can use std::set
-
-    ```void CPPLib::UniqeVectorBySet(std::vector<int> &input)```
-- Write a function ```void CPPLib::ReverseVector(std::vector<int> &input)``` that takes a vector of integers as input. The output is the same vector but in the reversed order:
-  - Example: before: [1, 2, 3], after:  [3, 2, 1]
-- Write a function ```void CPPLib::OddVector(std::vector<int> &input)``` that takes a vector of integers as input. The output should be the same vector where all even numbers are removed.
-  - Example: before: [1, 2, 3], after: [1, 3]
-- Write a function ```std::vector<int> CPPLib::UnionVectors(std::vector<int> &input1, std::vector<int> &input2)``` that takes two vectors v1 and v2 and returns a new vector that is the **union** of the values in v1 and v2. All the value in return vector should be unique.
-  - Example: input: (v1=[1, 2, 2, 3], v2=[3, 4, 4, 5]), output = [1, 2, 3, 4, 5]
-
-Write several tests using GTest for your function in [tests/q4student_test.cc](tests/q4_student_test.cc).
-
-Please create your test cases and run the following command to verify the functionality of your program.
-```
-bazel test tests:q4_student_test
 ```
 
 ## Question 5 (15 Points. Easy)
