@@ -32,7 +32,6 @@ class MaxHeap {
   void TrickleUp(int i);
   void TrickleDown(int i);
 
- private:
   vector<int> data_;
 };
 ```
@@ -66,7 +65,8 @@ bazel test tests:q2_student_test
 Write a function ```int findKthLargest(const vector<int> &input, int k)``` that finds the kth largest element in an unsorted vector and returns that value.
 - You should do this without sorting the vector
 - You can assume the input vector does not have duplicate values
-- Provide time complexity for the function.
+- Provide time complexity for the function
+- if k is invalid(eg: k <= 0), return -INX_MAX
 
 Example:
 input: [0, 2, 1, 5, 6, 3] and k = 2

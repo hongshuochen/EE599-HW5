@@ -25,7 +25,6 @@ class MaxHeap {
   void TrickleUp(int i);
   void TrickleDown(int i);
 
- private:
   vector<int> data_;
 };
 
