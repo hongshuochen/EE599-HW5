@@ -43,7 +43,7 @@ Please create your test cases and run the following command to verify the functi
 bazel test tests:q1_student_test
 ```
 
-## Question 2 (15 Points. Easy)
+## Question 2 (20 Points. Easy)
 
 Write a function ```void heapSort(vector<int> &input)``` that uses heap-sort to sort a vector of integers.
 - You should use std::priority_queue to implement your funciton.
@@ -60,7 +60,7 @@ Please create your test cases and run the following command to verify the functi
 bazel test tests:q2_student_test
 ```
 
-## Question 3 (15 Points. Easy)
+## Question 3 (20 Points. Easy)
 
 Write a function ```int findKthLargest(const vector<int> &input, int k)``` that finds the kth largest element in an unsorted vector and returns that value.
 - You should do this without sorting the vector
@@ -79,18 +79,32 @@ Please create your test cases and run the following command to verify the functi
 bazel test tests:q3_student_test
 ```
 
-## Question 4 (30 Points. Easy)
+## Question 4 (20 Points. Easy)
+
+Complete or select the correct word in the following statements:
+
+- A tree is an undirected / directed graph.
+- A tree is a connected / unconnected graph.
+- A tree is a cyclic / acyclic graph.
+- In a tree, there is / is not a path from each vertex to all other vertices.
+- A simple graph is a graph that _______________________.
+
+Ans:
+
+## Question 5 (20 Points. Easy)
 
 We learn a few sorting algorithms in lecture, and picture below shows the order of dividing and merging in MergeSort:
-<p align="center"><img width="40%" src="merge_sort.png" /></p>
+
+<p align="center"><img width="80%" src="merge_sort.png" /></p>
 
 Please create a similar image for sorting the letters in the following string in alphabetical order:
 ```
 ilovecoding
 ```
-To get full credit, please clearly specify when you are dividing and when you are merging and what two arrays are being merged. You can either attach an image OR text representation of your solution.
+To get full credit, you need to
+ - clearly specify when you are dividing and when you are merging and what two arrays are being merged. 
+ - derive the overall time compexity in your answer.
+You can either attach an image OR text representation of your solution.
 
-
-
-
+Ans:
 
