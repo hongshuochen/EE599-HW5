@@ -79,96 +79,18 @@ Please create your test cases and run the following command to verify the functi
 bazel test tests:q3_student_test
 ```
 
-## Question 5 (15 Points. Easy)
+## Question 4 (30 Points. Easy)
 
-- Write a function that takes a string as an input and **reverses** its value. The function has no output. It changes the value of the input parameter. Write a simple function ```void CPPLib::ReverseString(std::string &input)``` in [cpplib.cc](src/lib/cpplib.cc). *You are welcomed to call existing STL functions*.
+We learn a few sorting algorithms in lecture, and picture below shows the order of dividing and merging in MergeSort:
+<p align="center"><img width="40%" src="merge_sort.png" /></p>
 
-  - Example: Input: “EE599”, Output: “995EE”, string is stricted to be alphanumeric.
-  - You cannot use any new local variable of type *string or vector or array*, but you can create extra O(1) space, such as *int*. The reverse should happen **in place** (i.e. on the input string).
-
-- Write a function that takes a vector as an input and **reverses** its value. Write a simple function ```std::vector<int> CPPLib::ReverseVector_1(std::vector<int> input)``` in [cpplib.cc](src/lib/cpplib.cc)
-
-  - Example: Input: {1,2,3,4}, Output: {4,3,2,1}. 
-  - Use of [stack](https://en.cppreference.com/w/cpp/container/stack) is needed.
-
-- Write a function that converts a string to lower case. Write a simple function ```void CPPLib::ToLower(std::string& )``` in [cpplib.cc](src/lib/cpplib.cc). The input string is strictly alphanumeric.
-  - Example: input: “EE599”, output: “ee599”
-  - Use of [transform](http://www.cplusplus.com/reference/algorithm/transform/) is recommended but not a must.
-
-For all of the three questions, write a test using GTest for your finction in [tests/q5_student_test.cc](tests/q5_student_test.cc).
+Please create a similar image for sorting the letters in the following string in alphabetical order:
 ```
-bazel test tests:q5_student_test
+ilovecoding
 ```
-
-## Question 6 (25 Points. Medium)
-
-A palindrome is a word, phrase, or other sequences of characters that reads the same backward as forward, such as **madam**, **racecar**, or the number **10801**.
-
- Write a function ```bool canBePalindrome(const std::string &str)``` in [cpplib.cc](src/lib/cpplib.cc) that returns true if the permutation of the input could form a palindrome. and false if it is not.
+To get full credit, please clearly specify when you are dividing and when you are merging and what two arrays are being merged. You can either attach an image OR text representation of your solution.
 
 
-Example:\
-Input: str = "code".\
-Output: false.\
-Input: str = "aab".\
-Output: true.
 
-Write several tests using GTest for your function in [tests/q6_student_test.cc](tests/q6_student_test.cc).
 
-Please create your test cases and run the following command to verify the functionality of your program.
-```
-bazel test tests:q6_student_test
-```
 
-## Question 7 (20 Points. Medium)
-
-Write a function ```std::map<char, char> CPPLib::Mappable(const std::string& from, const std::string& to)``` in [cpplib.cc](src/lib/cpplib.cc).
-Write a function that takes two strings from and to and determines if they are mappable.
-
-- Two strings are mappable if the characters in from can be replaced to get to.
-- You can assume characters are strictly lower cases.  
-- Each character can only map to itself.
-- The output should be a map:
-  - Empty map if the mapping is not possible
-  - The actual map if the mapping was possible
-
-Example 1:
-Input: from = "add", to = "egg”
-Output: {(a->e), (d->g)}
-
-Example 2:
-Input: from = "extreme", to = "egg”
-Output: { }
-
-Example 3:
-Input: from = "harder", to = "waiter”
-Output: { }, because you cannot map 'r' to 'i' and 'r' at the same time!
-
-Example 4:
-Input: from = "aabbrr", to = "ddeekk”
-Output: {(a->d),(b->e), (r->k)}
-
-Further, write several tests using GTest for your function in [tests/q7_student_test.cc](tests/q7_student_test.cc) and compute the time complexity of your implementation.
-
-Please create your test cases and run the following command to verify the functionality of your program.
-```
-bazel test tests:q7_student_test
-```
-
-## Question 8 (20 Points. Medium)
-
- Write a function ```void kthPeek(std::vector<int> &input, int k);``` in [cpplib.cc](src/lib/cpplib.cc) that
-
-- Finds the kth smallest value of the vector, called target(the vector is not sorted)
-- It then rearranges the vector in such a way that it will have all the values lower than the target on the left side in ascending order and all the greater than the target value on the right side in descending order.
-
-Example:\
-Input: {637, 231, 123, 69, 43, 900, 10, 7, 21, 99, 0, 500}, k = 6.\
-Output: Output:{0, 7, 10, 21, 43, 69, 900, 637, 500, 231, 123, 99 }. (target = 69)
-
-Write several tests using GTest for your function in [tests/q8_student_test.cc](tests/q8_student_test.cc).
-
-Please create your test cases and run the following command to verify the functionality of your program.
-```
-bazel test tests:q8_student_test
-```
