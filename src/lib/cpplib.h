@@ -34,7 +34,7 @@ class CPPLib {
   void heapSort(vector<int> &input);
 
   //q3
-  int findKthLargest(const vector<int> &input, int k);
+  int findKthSmallest(const vector<vector<int>> &input, int k);
 
   private : 
 };

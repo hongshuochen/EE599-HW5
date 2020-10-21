@@ -13,6 +13,6 @@ void CPPLib::heapSort(vector<int> &input) {
 }
 
 // Question 3
-int CPPLib::findKthLargest(const vector<int> &input, int k) {
+int CPPLib::findKthSmallest(const vector<vector<int>> &input, int k) {
     return 0;
 }
