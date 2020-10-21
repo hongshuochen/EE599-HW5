@@ -2,7 +2,7 @@
 # HW5 EE599 - Computing Principles for Electrical Engineers
 
 - Deadline: Monday, September 21st by 23:59 pm
-- Total: 130 points. 100 points is considered full credit.
+- Total: 110 points. 100 points is considered full credit.
 
 **About Grading Rubrics**
 - For non-coding quesitions, you will find **Answer** below each question. Please write your answer there.
@@ -81,18 +81,6 @@ bazel test tests:q3_student_test
 ```
 
 ## Question 4 (20 Points. Easy)
-
-Complete or select the correct word in the following statements:
-
-- A tree is an undirected / directed graph.
-- A tree is a connected / unconnected graph.
-- A tree is a cyclic / acyclic graph.
-- In a tree, there is / is not a path from each vertex to all other vertices.
-- A simple graph is a graph that _______________________.
-
-Ans:
-
-## Question 5 (20 Points. Easy)
 
 We learn a few sorting algorithms in lecture, and picture below shows the order of dividing and merging in MergeSort:
 
