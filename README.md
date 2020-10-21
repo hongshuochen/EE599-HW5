@@ -68,12 +68,12 @@ Write a function ```int findKthSmallest(const vector<vector<int>> &input, int k)
 - Provide time complexity for your function
 - if k is invalid(eg: k <= 0), return -INX_MAX
 
-Example:
-input: [ [0, 2], [1, 5], [6, 3, 15] ] and k = 2
-output: 1
+Example:\
+input: [ [0, 2], [1, 5], [6, 3, 15] ] and k = 2\
+output: 1\
 
-input: [ [0, 2], [1, 2, 5], [6, 2, 2, 3, 15] ] and k = 7
-output: 3
+input: [ [0, 2], [1, 2, 5], [6, 2, 2, 3, 15] ] and k = 7\
+output: 3\
 
 Write several tests using GTest for your function in [tests/q3student_test.cc](tests/q3_student_test.cc).
 
